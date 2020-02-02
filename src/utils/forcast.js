@@ -11,7 +11,7 @@ const forcast = (lat, lng, callback) => {
             callback('The location is not found!, Try another location!!', undefined)
         }else {
             callback(undefined, 
-                `currently ${body.currently.temperature} degrees out. There is a ${body.currently.precipIntensity}% chanse of rain.`
+                `${body.daily.summary} And the overall forcast is ${body.daily.icon} .Moreover, the current temperature is ${body.currently.temperature}.There is a ${body.currently.precipIntensity}% chanse of rain.`
             )
         }
     })
